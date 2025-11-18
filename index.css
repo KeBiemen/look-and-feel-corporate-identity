@@ -1,0 +1,260 @@
+html {
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+
+  @media (min-width: 780px) {
+    section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1em;
+    }
+
+    form {
+      text-align: center;
+    }
+    h2 {
+      grid-column: 1 / -1;
+    }
+    article {
+      width: 22em;
+    }
+
+    .foto1 {
+      width: 21em;
+    }
+
+    @media (min-width: 1280px) {
+      section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1em;
+      }
+
+      form {
+        text-align: center;
+      }
+
+      article {
+        width: 25em;
+      }
+
+      .foto1 {
+        width: 24em;
+      }
+    }
+  }
+}
+
+h1 {
+  font-size: 2.7em;
+  background-image: url(backdrop.png);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 1.8px #000000;
+  text-align: center;
+}
+
+p {
+  margin-left: 2%;
+}
+
+form {
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 35px;
+}
+
+details {
+
+display: inline-table;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+  margin-right: 3%;
+  width: fit-content;
+  box-shadow: 3px 1px 1px rgba(0, 0, 0, 0.315);
+  align-self: center;
+  margin-bottom: 5%;
+
+   &:hover {
+    cursor: pointer;
+   }
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open]::details-content {
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0.5em;
+}
+
+input {
+  display: block;
+}
+
+input[type="radio"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+label {
+  display: flex;
+  border: 1px solid;
+  padding: 0.6em;
+  margin: 3px;
+  box-shadow: 3px 1px 1px black;
+
+  /*  als je over de label hover dan krijgt het een grijze kleur  */
+  &:hover {
+    background-color: gray;
+    color: white;
+  }
+
+  /*  als de label ingeklikt wordt dan krijgt het een ander kleur  */
+  &:active {
+    background-color: black;
+  }
+}
+
+/* als de filter aangevinkt is, dan krijgt hij een ander kleur */
+input[type="radio"]:checked + label {
+  border-color: #000000;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+section {
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 0%;
+  margin-left: 4%;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  filter: drop-shadow(3px 3px 1px black);
+  margin-bottom: 5%;
+  margin-top: 2%;
+  background-color: hsl(170 53% 70%);
+  border-radius: 4px;
+  width: 20.5em;
+  height: 29em;
+  box-shadow: 3px 1px 1px rgba(0, 0, 0, 0.315);
+  border: 2px solid #000000;
+  justify-self: center;
+}
+
+
+h3 {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  align-self: end;
+  font-size: 30px;
+  background-color: rgba(240, 240, 240, 0.659);
+  width: 10em;
+  grid-column: 1 / -1;
+  margin: 5%;
+  line-height: 1.5;
+  margin-left: 2.5%;
+}
+
+.foto1 {
+  margin-top: 2%;
+  grid-column: 1 / -1;
+  min-width: 19em;
+  height: 12em;
+  grid-row: 1 / 2;
+  object-fit: cover;
+  border: 2px solid #000000;
+
+  border-radius: 2%;
+  margin-bottom: 0%;
+  justify-self: center;
+}
+
+.Open-dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  align-self: flex-end;
+  row-gap: 1em;
+  grid-template-areas:
+    "Processstap-dt participatieniveau-dt"
+    "Processstap-dd participatieniveau-dd"
+    "uitvoering-dt uitvoering-dt"
+    "uitvoering-dd  uitvoering-dd ";
+    
+
+  dt {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    margin-left: 2.5em;
+    margin-top: 1em;
+    font-weight: light;
+    text-align: start;
+  }
+
+  dd {
+    margin-top: 0.25em;
+    padding-top: 0.25em;
+    margin-left: 2.5em;
+
+    font-weight: bold;
+
+    &:nth-of-type(1) {
+      grid-area: Processstap-dd;
+    }
+    &:nth-of-type(2) {
+      grid-area: participatieniveau-dd;
+    }
+    &:nth-of-type(3) {
+      grid-area: uitvoering-dd;
+    }
+  }
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "processtap-dd Participatieniveau-dd "
+    "Evaluating-dt Transparency-dt";
+   
+}
+
+footer {
+  background-color: rgb(63, 44, 74);
+  min-width: 100%;
+  
+
+}
+
+.footerh {
+  margin-top: 10%;
+  margin-left: 2%;
+  padding-top: 5%;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.partfo {
+  object-fit: contain;
+  margin: 10px;
+  min-height: fit-content;
+}
