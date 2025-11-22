@@ -1,10 +1,9 @@
 html {
-  margin: 0%;
-  padding: 0%;
 }
 
 body {
-
+  margin: 0%;
+  padding: 0%;
   @media (min-width: 780px) {
     section {
       display: grid;
@@ -23,7 +22,7 @@ body {
     }
 
     .foto1 {
-      width: 21em;
+      width: 19em;
     }
 
     @media (min-width: 1280px) {
@@ -42,20 +41,36 @@ body {
       }
 
       .foto1 {
-        width: 24em;
+        width: 20em;
       }
     }
   }
 }
 
+header {
+  background-color: var(--accent);
+  height: 70px;
+  margin: 0%;
+
+  .logo {
+    height: 21px;
+    padding: 1em;
+
+    @media (min-width: 620px) {
+      height: 32px;
+      max-width: 660px;
+    }
+  }
+}
+
 h1 {
-  font-size: 2.7em;
-  background-image: url(backdrop.png);
+  font-size: 4em;
+  background-image: url(logo.png);
   background-size: cover;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  -webkit-text-stroke: 1.8px #000000;
+
   text-align: center;
 }
 
@@ -70,19 +85,21 @@ form {
 }
 
 details {
-
-display: inline-table;
-  border-radius: 4px;
+  display: inline-table;
+  background-color: hsl(34, 48%, 84%);
+  border-radius: var(--border-radius-small);
   padding: 0.5em 0.5em 0;
   margin-right: 3%;
   width: fit-content;
   box-shadow: 3px 1px 1px rgba(0, 0, 0, 0.315);
   align-self: center;
   margin-bottom: 5%;
+  color: #000000;
 
-   &:hover {
+  &:hover {
     cursor: pointer;
-   }
+    background-color: var(--background-light);
+  }
 }
 
 summary {
@@ -92,7 +109,7 @@ summary {
 }
 
 details[open]::details-content {
-  border-radius: 4px;
+  border-radius: var(--border-radius-small);
   padding: 0.5em 0.5em 0.5em;
 }
 
@@ -151,37 +168,29 @@ article {
   margin-bottom: 5%;
   margin-top: 2%;
   background-color: hsl(170 53% 70%);
-  border-radius: 4px;
+  border-radius: var(--border-radius-default);
   width: 20.5em;
-  height: 29em;
+  height: 34em;
   box-shadow: 3px 1px 1px rgba(0, 0, 0, 0.315);
   justify-self: center;
 }
 
-
 h3 {
   grid-column: 1 / -1;
-  grid-row: 1;
-  align-self: end;
-  font-size: 30px;
-  background-color: rgba(240, 240, 240, 0.659);
-  width: 10em;
-  grid-column: 1 / -1;
-  margin: 5%;
-  line-height: 1.5;
-  margin-left: 2.5%;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+  color: var(--accent-dark);
+  padding: 0.3em;
 }
 
 .foto1 {
-  margin-top: 2%;
   grid-column: 1 / -1;
-  min-width: 19em;
-  height: 12em;
-  grid-row: 1 / 2;
+  width: 17em;
+  height: 9em;
+  grid-row: 2;
   object-fit: cover;
-
-  border-radius: 2%;
-  margin-bottom: 0%;
+  border-radius: var(--border-radius-default);
   justify-self: center;
 }
 
@@ -196,21 +205,23 @@ h3 {
     "Processstap-dd participatieniveau-dd"
     "uitvoering-dt uitvoering-dt"
     "uitvoering-dd  uitvoering-dd ";
-    
 
   dt {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid var(--accent-dark);
+    width: 90%;
+    padding-bottom: .5em;
     margin-left: 2.5em;
     margin-top: 1em;
     font-weight: light;
     text-align: start;
+  
   }
 
   dd {
     margin-top: 0.25em;
     padding-top: 0.25em;
     margin-left: 2.5em;
-
+  color: var(--accent-dark);
     font-weight: bold;
 
     &:nth-of-type(1) {
@@ -226,20 +237,18 @@ h3 {
 }
 
 dl {
+    color: var(--accent-dark);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(5, 1fr);
   grid-template-areas:
     "processtap-dd Participatieniveau-dd "
     "Evaluating-dt Transparency-dt";
-   
 }
 
 footer {
   background-color: rgb(63, 44, 74);
   min-width: 100%;
-  
-
 }
 
 .footerh {
