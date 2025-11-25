@@ -60,7 +60,7 @@ header {
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 3em;
   background-image: url(logo.png);
   background-size: cover;
   background-clip: text;
@@ -165,8 +165,8 @@ article {
   margin-top: 2%;
   background-color: hsl(170 53% 70%);
   border-radius: var(--border-radius-default);
-  width: 20.5em;
-  /* width: auto; */
+  /* width: 20.5em; */
+  width: auto;
   height: 34em;
   box-shadow: 3px 1px 1px rgba(0, 0, 0, 0.315);
   justify-self: center;
@@ -183,7 +183,7 @@ h3 {
 
 .foto1 {
   grid-column: 1 / -1;
-  width: 17em;
+  width: 18em;
   height: 9em;
   grid-row: 2;
   object-fit: cover;
