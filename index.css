@@ -88,7 +88,7 @@ details {
   box-shadow: 3px 1px 1px rgba(0, 0, 0, 0.315);
   align-self: center;
   margin-bottom: 5%;
-  color: #000000;
+  color: var(--accent-dark);
 
   &:hover {
     cursor: pointer;
@@ -138,8 +138,8 @@ label {
 
 /* als de filter aangevinkt is, dan krijgt hij een ander kleur */
 input[type="radio"]:checked + label {
-  border-color: #000000;
-  background-color: #000000;
+  border-color: var(--accent-dark);
+  background-color:var(--accent-dark);
   color: #ffffff;
 }
 
@@ -163,7 +163,7 @@ article {
   margin-top: 2%;
   background-color: hsl(170 53% 70%);
   border-radius: var(--border-radius-default);
-  /* width: 20.5em; */
+  /* width: 26em; */
   width: auto;
   height: 34em;
   box-shadow: 3px 1px 1px rgba(0, 0, 0, 0.315);
@@ -176,7 +176,7 @@ a::after {
 h3 {
   grid-column: 1 / -1;
   text-align: center;
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 400;
   color: var(--accent-dark);
   padding: 0.3em;
@@ -184,7 +184,7 @@ h3 {
 
 .foto1 {
   grid-column: 1 / -1;
-  width: 18em;
+  width: 16em;
   height: 9em;
   grid-row: 2;
   object-fit: cover;
@@ -193,6 +193,7 @@ h3 {
 }
 
 .Open-dl {
+  width: 13em;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(5, 1fr);
@@ -249,7 +250,7 @@ footer {
 }
 
 .footerh {
-  margin-top: 10%;
+  margin-top: 10em;
   margin-left: 2%;
   padding-top: 5%;
   font-size: 30px;
