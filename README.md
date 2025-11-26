@@ -9,6 +9,8 @@ De instructie vind je in: [INSTRUCTIONS](https://github.com/fdnd-task/look-and-f
 In dit project zie je een overzicht-pagina met ideeënkaartjes met als je op een van de kaartjes klikt op een detail-pagina terecht komt. 
 
 ## Beschrijving
+<img width="350" height="800" alt="afbeelding" src="https://github.com/user-attachments/assets/fd2144d6-467b-4be2-bd4c-ef0b6396e86d" />
+
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 <!-- Voeg een mooie poster visual toe 📸 -->
 (https://kebiemen.github.io/look-and-feel-corporate-identity/)
