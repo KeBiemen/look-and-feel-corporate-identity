@@ -2,7 +2,7 @@
 body {
   margin: 0%;
   padding: 0%;
-  @media (min-width: 780px) {
+  @media (min-width: 700px) {
     section {
       display: grid;
       grid-template-columns: 1fr 1fr;
